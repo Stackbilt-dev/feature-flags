@@ -1,0 +1,44 @@
+{
+  "name": "@stackbilt/feature-flags",
+  "version": "0.1.0",
+  "description": "High-performance feature flag system for Cloudflare Workers with canary deployments, A/B testing, and tenant isolation",
+  "author": "Kurt Overmier <kurt@stackbilt.dev>",
+  "license": "Apache-2.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest watch",
+    "test:coverage": "vitest run --coverage",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "hono": "^4.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "@cloudflare/workers-types": "^4.0.0",
+    "vitest": "^1.6.0"
+  },
+  "keywords": [
+    "feature-flags",
+    "cloudflare-workers",
+    "a-b-testing",
+    "canary-deployment",
+    "hono",
+    "edge-computing"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Stackbilt-dev/feature-flags.git"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
